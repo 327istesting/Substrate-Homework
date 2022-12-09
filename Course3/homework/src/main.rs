@@ -14,7 +14,7 @@ fn main() {
     }
 
 
-    fn bubble_sort_2<T: PartialOrd+Clone>(arr: &mut [T]) {
+    fn bubble_sort_2<T: PartialOrd+Clone+std::fmt::Debug>(arr: &mut [T]) {
         let mut p = arr.len() - 1;
         while p > 0{
             for i in 0..p{
@@ -44,7 +44,7 @@ fn main() {
 
     println!("Using Generics - original array: {:?}", test_2);
 
-    bubble_sort_2(&mut test);
+    bubble_sort_2(&mut test_2);
 
     println!("Using Generics - sorted array: {:?}", test_2);
 }
